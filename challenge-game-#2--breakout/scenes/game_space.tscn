@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://pubpgaism33c"]
+
+[ext_resource type="Script" uid="uid://desgbrg2jufs8" path="res://scripts/game_space.gd" id="1_71kpt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54pwq"]
+size = Vector2(1152, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ijyo"]
+size = Vector2(8, 664)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khsj8"]
+size = Vector2(8, 664)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_625hm"]
+size = Vector2(1152, 8)
+
+[node name="GameSpace" type="StaticBody2D" unique_id=2142343372]
+script = ExtResource("1_71kpt")
+
+[node name="Ceiling" type="CollisionShape2D" parent="." unique_id=1893129279]
+position = Vector2(576, -4)
+shape = SubResource("RectangleShape2D_54pwq")
+
+[node name="LeftWall" type="CollisionShape2D" parent="." unique_id=1922441254]
+position = Vector2(-4, 324)
+shape = SubResource("RectangleShape2D_4ijyo")
+
+[node name="RightWall" type="CollisionShape2D" parent="." unique_id=665067368]
+position = Vector2(1156, 324)
+shape = SubResource("RectangleShape2D_khsj8")
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1544552747]
+
+[node name="Floor" type="CollisionShape2D" parent="KillZone" unique_id=239889063]
+position = Vector2(576, 652)
+shape = SubResource("RectangleShape2D_625hm")
+
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]

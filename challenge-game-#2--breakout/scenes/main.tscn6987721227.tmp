@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c0ndlk0mtk0u4"]
+
+[ext_resource type="PackedScene" uid="uid://pubpgaism33c" path="res://scenes/game_space.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bggii4k3spyms" path="res://scripts/main.gd" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dq7h851h30h8q" path="res://scenes/player_paddle.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://5uu6vhwu1srl" path="res://scenes/ball.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://diq8rr5peal04" path="res://scripts/brick_spawner.gd" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://db6b3wogfoptn" path="res://scenes/bricks.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://c8217e6jnevma" path="res://scenes/hud.tscn" id="7_o6xl0"]
+
+[node name="Main" type="Node" unique_id=1267680168 node_paths=PackedStringArray("game_space", "ball", "player_paddle", "hud")]
+script = ExtResource("1_tefeu")
+game_space = NodePath("GameSpace")
+ball = NodePath("Ball")
+player_paddle = NodePath("PlayerPaddle")
+hud = NodePath("hud")
+
+[node name="GameSpace" parent="." unique_id=2142343372 instance=ExtResource("1_o5qli")]
+
+[node name="PlayerPaddle" parent="." unique_id=2134201542 instance=ExtResource("2_0wfyh")]
+unique_name_in_owner = true
+
+[node name="Ball" parent="." unique_id=391001709 instance=ExtResource("3_sugp2")]
+unique_name_in_owner = true
+
+[node name="BrickSpawner" type="Node2D" parent="." unique_id=1478100064]
+script = ExtResource("4_jyhfs")
+brick = ExtResource("5_tbgi4")
+
+[node name="hud" parent="." unique_id=803180098 instance=ExtResource("7_o6xl0")]
+
+[connection signal="player_lose" from="GameSpace" to="." method="_on_game_space_player_lose"]
+[connection signal="game_started" from="PlayerPaddle" to="." method="_on_player_paddle_game_started"]
