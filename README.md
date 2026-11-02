@@ -23,7 +23,7 @@ Run the game: Press F5 to play game.
 - **Dynamic Collision Handling:** Managed real-time physics interactions using `CharacterBody2D`/`RigidBody2D` to detect specific collision partners, trigger individual tile destruction, and scale up ball velocity.
 - **Global State Management:** Designed a robust tracking system for a finite number of player lives and implemented game-state transitions (Win/Game Over screens) based on remaining brick counts.
 
-###Story if you care
+### Story if you care
 This is the second game in the 20 Game Challenge. I had to decide between two games and I chose Breakout.
 
 The process of making Breakout was similar to Pong: 
