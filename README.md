@@ -1,4 +1,4 @@
-# game_challenge_2
+# Space Invaders - 20 Game Challenge - #2
 Space Invaders — A clone of Space Invaders built using Godot & GDScript.
 
 ## Features
