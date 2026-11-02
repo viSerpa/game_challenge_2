@@ -22,3 +22,17 @@ Run the game: Press F5 to play game.
 - **Decoupled Event Communication:** Implemented Godot's **Signals** to safely alert the main game manager when a brick was destroyed, avoiding tight coupling between the ball and the game loop.
 - **Dynamic Collision Handling:** Managed real-time physics interactions using `CharacterBody2D`/`RigidBody2D` to detect specific collision partners, trigger individual tile destruction, and scale up ball velocity.
 - **Global State Management:** Designed a robust tracking system for a finite number of player lives and implemented game-state transitions (Win/Game Over screens) based on remaining brick counts.
+
+###Story if you care
+This is the second game in the 20 Game Challenge. I had to decide between two games and I chose Breakout.
+
+The process of making Breakout was similar to Pong: 
+- make the paddle
+- player moves left and right
+- create a ball that bounces around
+
+The only difference was making the bricks that the player breaks. Creating the bricks was relatively easy. I just used a nested for loop and instantiated each brick individually.
+
+The difficult part for me was making the ball destroy the bricks and keeping track of how many lives the player has.
+
+The final parts of recreating Breakout was adding the hud for the players lives, game over screen, and win screen.
