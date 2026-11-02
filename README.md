@@ -9,13 +9,14 @@ Space Invaders — A clone of Space Invaders built using Godot & GDScript.
 
 ## How to Play
 Controls:
-A / D — Move Paddle / Player.
-Objective: Destroy all tiles without loosing all of your lives.
+- A / D — Move Paddle / Player.
+Objective: 
+- Destroy all tiles without loosing all of your lives.
 
 ## Setup & Installation
-Prerequisites: Godot version 4.7 or later.
-Clone the repo: https://github.com/viSerpa/game_challenge_2.git 
-Run the game: Press F5 to play game.
+- **Prerequisites**: Godot version 4.7 or later.
+- **Clone the repo**: https://github.com/viSerpa/game_challenge_2.git 
+- **Run the game**: Press F5 to play game.
 
 ## What I Learned
 - **Procedural Level Generation:** Used nested `for` loops to programmatically instantiate and grid-align an array of brick scenes at runtime.
