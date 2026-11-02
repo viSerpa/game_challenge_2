@@ -10,6 +10,7 @@ Space Invaders — A clone of Space Invaders built using Godot & GDScript.
 ## How to Play
 Controls:
 - A / D — Move Paddle / Player.
+
 Objective: 
 - Destroy all tiles without loosing all of your lives.
 
